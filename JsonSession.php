@@ -14,24 +14,29 @@ class JsonSession
     return $this->array = $array;
   }
 
-  public function set($key = [], $val = '')
+  public function set($key = '', $val = '')
   {
     $this->array[$key] = $val;
     $json = json_encode($this->array, JSON_UNESCAPED_UNICODE);
     file_put_contents($this->path, $json);
   }
 
-  public function get($key = [])
+  public function get($key = '')
   {
     return $this->array[$key];
   }
 
 
-  public function del($key = [])
+  public function del($key = '')
   {
     unset($this->array[$key]);
     $json = json_encode($this->array, JSON_UNESCAPED_UNICODE);
     file_put_contents($this->path, $json);
+  }
+
+  public function count()
+  {
+    
   }
 
 }
