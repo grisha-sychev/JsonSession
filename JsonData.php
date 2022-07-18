@@ -7,8 +7,8 @@ class JsonData
 
   public function file($file)
   {
-    mkdir($_SERVER['DOCUMENT_ROOT'].'/src/JsonSession/', 0755);
-    $this->path = $_SERVER['DOCUMENT_ROOT'].'/src/JsonSession/'.$file.'.json';
+    mkdir($_SERVER['DOCUMENT_ROOT'].'/src/JsonData/', 0755);
+    $this->path = $_SERVER['DOCUMENT_ROOT'].'/src/JsonData/'.$file.'.json';
     $json = @file_get_contents($this->path);
     $array = (array) json_decode($json, true);
     return $this->array = $array;
