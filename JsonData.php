@@ -1,6 +1,6 @@
 <?php
 
-class JsonSession
+class JsonData
 {
   private $path;
   private $array;
